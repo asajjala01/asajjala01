@@ -1,7 +1,15 @@
+```
+┌──(abhi㉿security)-[~/certifications/google-cybersecurity]
+└─$ cat course-01-foundations.md
+```
+
 # Course 1: Foundations of Cybersecurity
 
 **Course:** Google Cybersecurity Certificate — Course 1 of 8  
 **Status:** ✅ Completed
+
+[![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat)]()
+[![Course](https://img.shields.io/badge/Course-1%20of%208-grey?style=flat)]()
 
 ---
 
@@ -44,7 +52,7 @@ The three core principles that guide all of security:
 
 ---
 
-## Common Attack Types (Intro Level)
+## Common Attack Types
 
 - **Phishing** — deceptive emails/messages to steal credentials or install malware
 - **Malware** — malicious software (virus, worm, ransomware, spyware, trojan)
@@ -55,7 +63,7 @@ The three core principles that guide all of security:
 
 ---
 
-## Security Frameworks (Intro)
+## Security Frameworks
 
 ### NIST Cybersecurity Framework (CSF)
 Five core functions:
@@ -65,7 +73,7 @@ Five core functions:
 4. **Respond** — take action on a detected incident
 5. **Recover** — restore normal operations
 
-### OWASP Principles (Intro)
+### OWASP Principles
 - Minimize attack surface
 - Least privilege
 - Defense in depth
@@ -89,8 +97,16 @@ Five core functions:
 
 ---
 
+## What I Had to Do
+
+The only portfolio activity in this course was drafting a **professional statement** — a short written piece that captures who you are, why you're entering cybersecurity, and what you bring to the field. At that point in the course it was more of a starting point than a finished product, something to revisit and refine as the program went on and my direction became clearer. It was a useful exercise though because it forced me to actually put into words why I was doing this, which isn't always easy when you're just getting started.
+
+---
+
 ## My Take
 
-This was the course that set the tone for everything. Coming in with no background, I didn't really know what cybersecurity even looked like day to day — this gave me the first real framework to think about it. The CIA Triad sounds simple but it genuinely changes how you look at every security situation once it clicks. You stop thinking about threats as random and start asking "what are they actually after — confidentiality, integrity, or availability?"
+Most of this course was relatively straightforward as an intro — the concepts weren't deeply technical and were designed to be accessible to someone with zero background, which I appreciated coming in cold. The CIA Triad, threat actors, attack types, NIST framework — all of it made intuitive sense pretty quickly and gave me a solid mental model to build on.
 
-What I found interesting here was the threat actor breakdown. I hadn't really thought about the fact that not everyone attacking a system has the same motivation — a nation-state is playing a completely different game than a ransomware gang. That context made the field feel a lot more real and a lot less abstract. The NIST framework was also a good early anchor — even if you don't fully understand every piece yet, having that Identify → Protect → Detect → Respond → Recover mental model makes everything else make more sense as you go.
+The one area where I had to slow down and put in extra time was the CISSP 8 domains. Not because any individual domain is complicated, but because there are eight of them covering completely different areas of security and understanding how they relate to each other took some work. I went through multiple resources — rewatching sections, looking things up separately, talking it through — before it really clicked as a cohesive picture rather than just a list to memorize. Once it did though it became a genuinely useful map for thinking about where different security roles and responsibilities fit.
+
+Everything else in this course set the tone well. The threat actor motivation breakdown was one of the more interesting parts — understanding that a nation-state and a ransomware gang are operating with completely different goals changes how you think about attribution and intent when analyzing a threat.
