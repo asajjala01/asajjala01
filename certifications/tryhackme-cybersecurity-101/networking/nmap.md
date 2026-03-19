@@ -52,7 +52,7 @@ nmap -sS 10.65.174.174
 
 The scan came back with 6 open ports — echo (7), discard (9), daytime (13), qotd (17), SSH (22), and HTTP on port 8008. Most of those are legacy services you'd rarely see in a modern environment — which itself is a finding worth noting. The interesting one was port 8008 running HTTP. Navigated to `http://10.65.174.174:8008` in the browser and found the flag sitting on the page.
 
-![Flag page showing THM{SECRET_PAGE_38B9P6} on the web server running on port 8008](./screenshots/flag-capture.png)
+![Flag page showing THM{SECRET_PAGE_38B9P6} on the web server running on port 8008](./screenshots/nmap-flag-capture.png)
 
 **Flag captured:** `THM{SECRET_PAGE_38B9P6}`
 
