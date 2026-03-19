@@ -1,7 +1,16 @@
+```
+┌──(abhi㉿security)-[~/certifications/google-cybersecurity]
+└─$ cat course-08-career.md
+```
+
 # Course 8: Put It to Work — Prepare for Cybersecurity Jobs
 
 **Course:** Google Cybersecurity Certificate — Course 8 of 8  
 **Status:** ✅ Completed
+
+[![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat)]()
+[![Course](https://img.shields.io/badge/Course-8%20of%208-grey?style=flat)]()
+[![Tools](https://img.shields.io/badge/Tools-NotebookLM%20%7C%20AI%20Job%20Tools-grey?style=flat)]()
 
 ---
 
@@ -19,32 +28,9 @@
 
 ---
 
-## Portfolio Building
-
-What employers look for beyond certifications:
-
-### GitHub (this repo)
-- CTF write-ups demonstrating methodology
-- Security tools you've built in Python
-- Documentation showing you can communicate technically
-- Consistent activity — shows ongoing learning
-
-### TryHackMe / Hack The Box
-- Public profile with completion percentages
-- Top X% ranking on TryHackMe
-- Completed learning paths relevant to the role
-
-### Home Lab
-- Documented setup shows initiative
-- Practice environment for tools mentioned in interviews
-
----
-
 ## Communicating with Stakeholders
 
-A major theme of Course 8 — security isn't just technical, it's about translating risk into business language.
-
-### Technical → Non-Technical Translation Examples
+Security isn't just technical — it's about translating risk into business language.
 
 | Technical Finding | Stakeholder Language |
 |---|---|
@@ -71,12 +57,10 @@ Knowing when to escalate is a key L1 SOC skill.
 
 ## Security Mindset
 
-Themes emphasized throughout the entire certificate:
-
 - **Think like an attacker** — understand how systems get compromised to defend them better
 - **Defense in depth** — no single control is enough; layer your defenses
 - **Assume breach** — operate as if attackers are already inside; focus on detection and response
-- **Document everything** — logs, notes, actions taken. If it isn't documented, it didn't happen.
+- **Document everything** — if it isn't documented, it didn't happen
 - **Continuous learning** — the threat landscape changes constantly; staying current is part of the job
 
 ---
@@ -104,9 +88,7 @@ Themes emphasized throughout the entire certificate:
 
 ---
 
-## Transferable Skills from Sales (My Notes)
-
-The certificate reinforced what I already suspected — my sales background maps to security in concrete ways:
+## Transferable Skills from Sales
 
 | Sales Skill | Security Application |
 |---|---|
@@ -119,12 +101,30 @@ The certificate reinforced what I already suspected — my sales background maps
 
 ---
 
+## What I Had to Do
+
+This course was less about technical labs and more about pulling everything together — professional development, real-world application, and job readiness.
+
+**Activities:**
+
+1. **Analyze event logs with NotebookLM** — used Google's NotebookLM to analyze and query event log data. This was a practical introduction to using AI tools specifically for security investigation work — uploading log data, asking questions about it, and getting structured insights back. A preview of where AI-assisted analysis is heading in real SOC environments.
+
+2. **Escalation** — worked through escalation scenarios. Given different incident types and severity levels, practice making the call on when to handle something yourself versus when to escalate to senior staff. The judgment around escalation is one of the most important soft skills for an L1 analyst and something you can only really develop through scenario practice.
+
+3. **Exploring cybersecurity organizations** — researched professional organizations, communities, and resources in the cybersecurity space. Understanding where the industry gathers, where threat intelligence is shared, and where continuing education lives — ISACA, ISC2, SANS, local security groups, CTF communities.
+
+**Bonus Module — Accelerate Your Job Search with AI:**
+
+Google added a dedicated AI module at the end of the course focused entirely on using AI tools to get hired faster. This wasn't theoretical — it was practical and immediately applicable. Covered using AI to strengthen your resume and surface transferable skills, optimize your LinkedIn profile and close keyword gaps recruiters search for, prep for interviews through mock sessions and feedback, write personalized cover letters and cold outreach, and build a study plan tailored to your specific target role. Coming from sales I already knew how to communicate — but this module helped me frame that experience in language that actually resonates with technical hiring managers. Genuinely one of the most useful things in the entire certificate.
+
+---
+
 ## My Take
 
 A fitting way to end the certificate. By the time I got here I already had a pretty clear picture of where I wanted to go — SOC analyst, blue team, detection and response — so this course felt like it was putting a bow on everything that came before it.
 
 What I appreciated most was that it didn't just say "here's how to get a job" and leave it at that. It actually made me think seriously about how to tell my story as someone coming from a non-traditional background. The sales-to-security transition isn't obvious on paper and this course pushed me to connect those dots deliberately — not just list what I did before but articulate why it's actually relevant. That work ended up shaping how I wrote my resume, how I talk about myself in interviews, and honestly how I built out this entire GitHub profile.
 
-This was also right around the time I fully committed to TryHackMe. I'd discovered it during Course 6 but finishing the certificate gave me the green light to dive in properly. TryHackMe was the missing piece — it took everything I'd learned across these 8 courses and gave me a place to actually apply it in a hands-on environment. Real labs, real tools, real scenarios. The Google certificate gave me the foundation and TryHackMe gave me the practice floor. Between the two I finally felt like I wasn't just studying security — I was doing it.
+The NotebookLM activity stood out to me because it felt forward-looking. Using AI to actually query and analyze log data isn't a novelty — it's where SOC work is heading and getting exposure to that workflow early feels like an advantage.
 
-The AI component that came at the end was a bonus I wasn't expecting and genuinely useful — I've talked about that in the main README so I won't repeat it here. But overall this course reminded me that breaking into a new field isn't just about what you know, it's about how well you can communicate what you know and where you're headed. That part I feel good about.
+This was also right around the time I fully committed to TryHackMe. I'd discovered it during Course 6 but finishing the certificate gave me the green light to dive in properly. TryHackMe was the missing piece — it took everything I'd learned across these 8 courses and gave me a place to actually apply it in a hands-on environment. The Google certificate gave me the foundation and TryHackMe gave me the practice floor. Between the two I finally felt like I wasn't just studying security — I was doing it.
