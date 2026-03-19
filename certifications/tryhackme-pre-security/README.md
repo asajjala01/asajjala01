@@ -51,6 +51,6 @@ The attacks and defenses module was a good closer — it was a bit of both famil
 
 | | |
 |---|---|
-| ![Certificate](./screenshots/certificate.png) | Certificate of completion |
+| ![Certificate](./screenshots/sec01_cert.png) | Certificate of completion |
 
 > *Additional lab screenshots are included in each module's write-up.*
