@@ -1,9 +1,15 @@
-# TryHackMe — Pre-Security Certificate
+```
+┌──(abhi㉿security)-[~/certifications/tryhackme-pre-security]
+└─$ cat README.md
+```
 
-**Platform:** TryHackMe  
-**Path:** Pre-Security  
-**Status:** ✅ Completed  
-**Certificate:** [🏅 View & Verify Certificate](https://assets.tryhackme.com/certification-certificate/69b04b04d30b8a05d444491b.pdf)
+# TryHackMe — Pre-Security Path
+
+**Offered by:** TryHackMe
+
+[![TryHackMe PreSecurity](https://img.shields.io/badge/TryHackMe%20Pre--Security-Completed-212C42?style=flat&logo=tryhackme&logoColor=white)](https://assets.tryhackme.com/certification-certificate/69b04b04d30b8a05d444491b.pdf)
+[![Platform](https://img.shields.io/badge/Platform-TryHackMe-212C42?style=flat&logo=tryhackme&logoColor=white)](https://tryhackme.com/p/sajjala.abhishek)
+[![Certificate](https://img.shields.io/badge/Certificate-View%20%26%20Verify-brightgreen?style=flat&logo=tryhackme&logoColor=white)](https://assets.tryhackme.com/certification-certificate/69b04b04d30b8a05d444491b.pdf)
 
 ---
 
@@ -47,10 +53,14 @@ The attacks and defenses module was a good closer — it was a bit of both famil
 
 ---
 
-## Screenshots
+## Skills Gained
 
-| | |
-|---|---|
-| ![Certificate](./screenshots/certificate.png) | Certificate of completion |
-
-> *Additional lab screenshots are included in each module's write-up.*
+![Networking](https://img.shields.io/badge/Networking-grey?style=flat)
+![Linux CLI](https://img.shields.io/badge/Linux%20CLI-grey?style=flat)
+![Windows CLI](https://img.shields.io/badge/Windows%20CLI-grey?style=flat)
+![OS Security](https://img.shields.io/badge/OS%20Security-grey?style=flat)
+![Web Fundamentals](https://img.shields.io/badge/Web%20Fundamentals-grey?style=flat)
+![SQL](https://img.shields.io/badge/SQL-grey?style=flat)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![CTF Methodology](https://img.shields.io/badge/CTF%20Methodology-grey?style=flat)
+![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=flat&logo=wireshark&logoColor=white)
