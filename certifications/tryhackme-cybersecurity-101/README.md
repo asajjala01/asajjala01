@@ -26,14 +26,9 @@ This is where I started feeling like I was genuinely doing security work rather 
 
 ## How These Files Are Written
 
-Every module and room in this folder follows the same format I've used across all my certifications — no syllabus summaries, no copying what the course says. Each file covers:
+Every module in this folder covers what I actually did in the labs — the specific commands I ran, the output I got back, flags I captured, and my honest take on what clicked and what didn't. These aren't course summaries — they're documentation of real hands-on work.
 
-- **What I actually did** — the specific commands I ran, the tasks I completed, the labs I worked through
-- **What the output showed** — real terminal output, scan results, flags captured, documented with screenshots
-- **What I learned** — the concepts that clicked, the things that took longer, the connections I made to other things I'd studied
-- **My take** — an honest personal reflection on the room, what was interesting, what was confusing, and how it fits into the bigger picture
-
-Screenshots are included in each module's `screenshots/` folder and referenced inline in the write-ups. These aren't staged — they're captures from the actual lab sessions as I worked through them.
+I have write-ups for some of the rooms and labs covered across these modules. For the more detailed attack box walkthroughs, CTF challenges, and hands-on lab documentation — including terminal screenshots and step-by-step methodology — head over to the [ctf-writeups/](../../ctf-writeups/) folder. That's where the full lab work lives.
 
 ---
 
@@ -41,13 +36,13 @@ Screenshots are included in each module's `screenshots/` folder and referenced i
 
 | Module | Topics | Status |
 |---|---|---|
-| [Networking](./networking/) | Nmap, protocols, traffic analysis | 🔄 In Progress |
-| [Web Hacking](./web-hacking/) | HTTP, OWASP, Burp Suite basics | 📖 Upcoming |
-| [Exploitation Basics](./exploitation-basics/) | Metasploit, common vulnerabilities | 📖 Upcoming |
-| [Privilege Escalation](./privilege-escalation/) | Linux and Windows privesc | 📖 Upcoming |
-| [Cryptography](./cryptography/) | Hashing, encryption, ciphers | 📖 Upcoming |
-| [Introduction to SIEM](./siem/) | Splunk, log analysis, detection | 📖 Upcoming |
-| [Digital Forensics](./digital-forensics/) | Evidence collection, file analysis | 📖 Upcoming |
+| Networking | Nmap, protocols, traffic analysis | 🔄 In Progress |
+| Web Hacking | HTTP, OWASP, Burp Suite basics | 📖 Upcoming |
+| Exploitation Basics | Metasploit, common vulnerabilities | 📖 Upcoming |
+| Privilege Escalation | Linux and Windows privesc | 📖 Upcoming |
+| Cryptography | Hashing, encryption, ciphers | 📖 Upcoming |
+| Introduction to SIEM | Splunk, log analysis, detection | 📖 Upcoming |
+| Digital Forensics | Evidence collection, file analysis | 📖 Upcoming |
 
 ---
 
