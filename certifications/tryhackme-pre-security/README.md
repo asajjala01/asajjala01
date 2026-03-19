@@ -27,19 +27,21 @@ The Pre-Security path is designed to bridge the gap between knowing security con
 
 For each module they provided a virtual machine loaded with files, systems, and scenarios. The tasks weren't just "answer this question" — they were "go find this file," "probe this system and tell me what you see," "capture this flag." That practical layer on top of familiar concepts made everything stick in a way that reading alone never quite does.
 
+For the more detailed lab walkthroughs, attack box documentation, and hands-on write-ups — head over to the [ctf-writeups/](https://github.com/asajjala01/asajjala01/tree/main/ctf_writeups) folder. That's where the full lab work lives.
+
 ---
 
 ## Module Breakdown
 
 | # | Module | Topics |
 |---|---|---|
-| 1 | [Intro to Cybersecurity](./01-intro-to-cybersecurity.md) | Offensive vs defensive security, career paths, real-world context |
-| 2 | [Network Fundamentals](./02-network-fundamentals.md) | TCP/IP, OSI model, packets, protocols, Wireshark intro |
-| 3 | [How the Web Works](./03-how-the-web-works.md) | HTTP/S, DNS, web requests, how browsers communicate |
-| 4 | [Computer Fundamentals](./04-computer-fundamentals.md) | Hardware, binary, how computers process information |
-| 5 | [Operating System Basics](./05-operating-system-basics.md) | OS intro, Windows basics, Linux CLI, Windows CLI, OS security |
-| 6 | [Software Basics](./06-software-basics.md) | Data representation, encoding, Python demo, JavaScript demo, SQL basics |
-| 7 | [Attacks and Defenses](./07-attacks-and-defenses.md) | Common attack types, defensive techniques, real-world scenarios |
+| 1 | Intro to Cybersecurity | Offensive vs defensive security, career paths, real-world context |
+| 2 | Network Fundamentals | TCP/IP, OSI model, packets, protocols, Wireshark intro |
+| 3 | How the Web Works | HTTP/S, DNS, web requests, how browsers communicate |
+| 4 | Computer Fundamentals | Hardware, binary, how computers process information |
+| 5 | Operating System Basics | OS intro, Windows basics, Linux CLI, Windows CLI, OS security |
+| 6 | Software Basics | Data representation, encoding, Python demo, JavaScript demo, SQL basics |
+| 7 | Attacks and Defenses | Common attack types, defensive techniques, real-world scenarios |
 
 ---
 
