@@ -1,7 +1,16 @@
+```
+┌──(abhi㉿security)-[~/home-lab]
+└─$ cat README.md
+```
+
 # Home Lab
 
-**Status:** 🔄 In Planning  
-**Goal:** Build a personal cybersecurity lab environment for hands-on practice outside of guided platforms like TryHackMe.
+**Status:** In Planning — build starts once TryHackMe SOC path and Security+ prep are further along.
+
+[![Status](https://img.shields.io/badge/Status-In%20Planning-yellow?style=flat)]()
+[![Hypervisor](https://img.shields.io/badge/Hypervisor-VirtualBox-183A61?style=flat&logo=virtualbox&logoColor=white)]()
+[![Attacker](https://img.shields.io/badge/Attacker%20VM-Kali%20Linux-557C94?style=flat&logo=kali-linux&logoColor=white)]()
+[![Target](https://img.shields.io/badge/Target%20VM-Metasploitable%202-red?style=flat)]()
 
 ---
 
@@ -34,7 +43,15 @@ This is the next milestone on my learning path and I'll be documenting the entir
 - No traffic leaves the lab environment
 
 ### Tools to Install and Practice
-`Nmap` `Metasploit` `Wireshark` `Burp Suite` `Hydra` `John the Ripper` `Gobuster` `Nikto`
+
+![Nmap](https://img.shields.io/badge/Nmap-grey?style=flat)
+![Metasploit](https://img.shields.io/badge/Metasploit-grey?style=flat)
+![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=flat&logo=wireshark&logoColor=white)
+![Burp Suite](https://img.shields.io/badge/Burp%20Suite-FF6633?style=flat&logo=burpsuite&logoColor=white)
+![Hydra](https://img.shields.io/badge/Hydra-grey?style=flat)
+![John the Ripper](https://img.shields.io/badge/John%20the%20Ripper-grey?style=flat)
+![Gobuster](https://img.shields.io/badge/Gobuster-grey?style=flat)
+![Nikto](https://img.shields.io/badge/Nikto-grey?style=flat)
 
 ---
 
@@ -61,9 +78,5 @@ Once the lab is built each section below will be filled in:
 - [ ] **Lessons Learned** — what broke, what I fixed, what I learned
 
 ---
-
-## Timeline
-
-Currently working through the TryHackMe SOC Analyst path and Security+ prep. Home lab build is the next major project on the roadmap once those are further along. Will update this folder as soon as the build begins.
 
 > *"You don't really understand something until you've broken it yourself."*
