@@ -1,10 +1,16 @@
+```
+┌──(abhi㉿security)-[~/certifications/google-cybersecurity]
+└─$ cat README.md
+```
+
 # Google Cybersecurity Certificate
 
-**Platform:** Coursera  
-**Offered by:** Google  
-**Status:** ✅ Completed  
-**Duration:** 8 Courses  
-**Certificate:** [🏅 View & Verify on Coursera](https://coursera.org/share/7973a81b789856ef261791f1cd77960d)
+**Offered by:** Google · Coursera
+
+[![Google Cybersecurity](https://img.shields.io/badge/Google%20Cybersecurity%20Certificate-Completed-4285F4?style=flat&logo=google&logoColor=white)](https://coursera.org/share/7973a81b789856ef261791f1cd77960d)
+[![Coursera](https://img.shields.io/badge/Platform-Coursera-0056D2?style=flat&logo=coursera&logoColor=white)]()
+[![Courses](https://img.shields.io/badge/Duration-8%20Courses-grey?style=flat)]()
+[![Certificate](https://img.shields.io/badge/Certificate-View%20%26%20Verify-brightgreen?style=flat&logo=google&logoColor=white)](https://coursera.org/share/7973a81b789856ef261791f1cd77960d)
 
 ---
 
@@ -47,21 +53,15 @@ Coming from a sales background, I already knew how to communicate — but I didn
 
 ---
 
-## Key Skills Gained
+## Skills Gained
 
-- Understanding of the CIA Triad (Confidentiality, Integrity, Availability)
-- NIST Cybersecurity Framework and risk management
-- Network security fundamentals (TCP/IP, firewalls, VPNs, protocols)
-- Linux command line for security tasks
-- SQL queries to investigate security incidents
-- SIEM tools (Splunk, Chronicle) for log analysis
-- Incident detection and response lifecycle
-- Python automation for security workflows
-- Security audit methodology
-- Using AI tools for career development and job search strategy
-
----
-
-## Tools and Platforms Introduced
-
-`Splunk` `Chronicle` `Wireshark` `tcpdump` `Linux CLI` `SQL` `Python` `NIST CSF` `AI Job Tools`
+![CIA Triad](https://img.shields.io/badge/CIA%20Triad-grey?style=flat)
+![NIST CSF](https://img.shields.io/badge/NIST%20CSF-grey?style=flat)
+![Network Security](https://img.shields.io/badge/Network%20Security-grey?style=flat)
+![Linux CLI](https://img.shields.io/badge/Linux%20CLI-grey?style=flat)
+![SQL](https://img.shields.io/badge/SQL-grey?style=flat)
+![Splunk](https://img.shields.io/badge/Splunk-000000?style=flat&logo=splunk&logoColor=white)
+![Chronicle](https://img.shields.io/badge/Chronicle-grey?style=flat)
+![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=flat&logo=wireshark&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Incident Response](https://img.shields.io/badge/Incident%20Response-grey?style=flat)
