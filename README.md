@@ -7,7 +7,7 @@
 
 **Aspiring SOC Analyst · Blue Team · San Diego, CA**
 
-Transitioning into cybersecurity through hands-on labs, certifications, and relentless documentation. My current focus is SOC analyst work — detection, response, and blue team operations — though as I grow in the field that direction may evolve. Former sales professional working with small to mid-size businesses — turns out the skills that make someone effective in that environment translate surprisingly well to security work.
+Transitioning into cybersecurity through hands-on labs, certifications, and relentless documentation. My current focus is SOC analyst work — detection, response, and blue team operations — though as I grow in the field that direction may evolve. Former sales professional with a background in cold-calling and working with small to mid-size businesses — turns out the skills that make someone effective in that environment translate surprisingly well to security work.
 
 ---
 
@@ -72,6 +72,7 @@ Security+ Prep               ████░░░░░░░░░░░░░
 | [ctf-writeups/](./ctf-writeups) | Standalone CTF challenges and practice machines — methodology, tools, flags, takeaways |
 | [python-projects/](./python-projects) | Security-focused Python scripts and tools built alongside my learning path |
 | [home-lab/](./home-lab) | Personal lab environment — planned setup, tools, and practice scenarios |
+| [claude-code-projects/](./claude-code-projects) | Projects built with Claude Code — security tools, experiments, and whatever seemed fun to build |
 
 ---
 
