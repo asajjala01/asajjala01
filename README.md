@@ -7,7 +7,7 @@
 
 **Aspiring SOC Analyst · Blue Team · San Diego, CA**
 
-Transitioning into cybersecurity through hands-on labs, certifications, and relentless documentation. My current focus is SOC analyst work — detection, response, and blue team operations — though as I grow in the field that direction may evolve. Former sales professional with a background in cold-calling and working with small to mid-size businesses — turns out the skills that make someone effective in that environment translate surprisingly well to security work.
+Transitioning into cybersecurity through hands-on labs, certifications, and relentless documentation. My current focus is SOC analyst work — detection, response, and blue team operations — though as I grow in the field that direction may evolve. Former sales professional working with small to mid-size businesses — turns out the skills that make someone effective in that environment translate surprisingly well to security work.
 
 ---
 
@@ -77,14 +77,14 @@ Security+ Prep               ████░░░░░░░░░░░░░
 
 ### Background
 
-My path into cybersecurity isn't traditional. I spent years in sales — specifically cold-calling and building relationships with small to mid-size businesses. On the surface that might not seem relevant, but the overlap is real and I've felt it throughout this journey.
+My path into cybersecurity isn't traditional. I spent years in sales working with small to mid-size businesses — and the overlap with security work is more direct than most people expect.
 
-Cold-calling teaches you to think fast, communicate clearly under pressure, and handle rejection without losing momentum — the same composure that matters when you're triaging an active incident at 2am. Working with SMBs means you're constantly context-switching between different environments, understanding how each business operates, and identifying where the gaps are. That's not far off from how a SOC analyst needs to think about the organizations they protect. And years of pipeline management and CRM work translates directly into the kind of data discipline and process adherence that security operations depend on.
+Building relationships with SMB clients means constantly context-switching between different environments, understanding how each business operates, and identifying where the gaps are. That's not far off from how a SOC analyst needs to think about the organizations they protect. The pressure of client-facing work, the discipline of process adherence, the pattern recognition that comes from managing a pipeline — those skills don't disappear when you change industries. They just get applied differently.
 
 | Sales Background | Security Application |
 |---|---|
-| Cold-calling & handling pressure | Staying focused and methodical during incident response |
-| SMB relationship management | Understanding business context behind security decisions |
+| Client-facing communication under pressure | Staying focused and methodical during incident response |
+| SMB environment context-switching | Understanding business context behind security decisions |
 | Pipeline analysis & pattern recognition | Log analysis and anomaly detection |
 | CRM data management & compliance | Security data hygiene and policy adherence |
 | Training and onboarding new reps | Security awareness knowledge transfer |
