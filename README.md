@@ -7,7 +7,7 @@
 
 **Aspiring SOC Analyst · Blue Team · San Diego, CA**
 
-Transitioning into cybersecurity through hands-on labs, certifications, and relentless documentation. Former sales professional — pattern recognition, clear communication under pressure, and strict process adherence turn out to be pretty useful on a security team.
+Transitioning into cybersecurity through hands-on labs, certifications, and relentless documentation. My current focus is SOC analyst work — detection, response, and blue team operations — though as I grow in the field that direction may evolve. Former sales professional with a background in cold-calling and working with small to mid-size businesses — turns out the skills that make someone effective in that environment translate surprisingly well to security work.
 
 ---
 
@@ -24,7 +24,6 @@ Transitioning into cybersecurity through hands-on labs, certifications, and rele
 
 [![Google Cybersecurity](https://img.shields.io/badge/Google%20Cybersecurity%20Certificate-Completed-4285F4?style=flat&logo=google&logoColor=white)](https://coursera.org/share/7973a81b789856ef261791f1cd77960d)
 [![TryHackMe PreSecurity](https://img.shields.io/badge/TryHackMe%20Pre--Security-Completed-212C42?style=flat&logo=tryhackme&logoColor=white)](https://assets.tryhackme.com/certification-certificate/69b04b04d30b8a05d444491b.pdf)
-[![eJPT](https://img.shields.io/badge/eJPT-Upcoming-orange?style=flat&logoColor=white)]()
 [![Security+](https://img.shields.io/badge/CompTIA%20Security%2B-Upcoming-red?style=flat&logo=comptia&logoColor=white)]()
 [![Anthropic](https://img.shields.io/badge/Anthropic%20Academy-In%20Progress-D97757?style=flat&logo=claude&logoColor=white)]()
 
@@ -61,7 +60,6 @@ TryHackMe Pre-Security       █████████████████
 TryHackMe SOC Path           ██████████████░░░░░░  ~70%
 Anthropic Academy            ████████░░░░░░░░░░░░  In Progress
 Security+ Prep               ████░░░░░░░░░░░░░░░░  ~20%
-eJPT Prep                    ██░░░░░░░░░░░░░░░░░░  Starting
 ```
 
 ---
@@ -79,15 +77,17 @@ eJPT Prep                    ██░░░░░░░░░░░░░░░
 
 ### Background
 
-My path into cybersecurity isn't traditional. I came from sales — years of client-facing work, pipeline management, process adherence, and communicating complex things simply. I didn't realize until I started studying security how directly those skills transfer.
+My path into cybersecurity isn't traditional. I spent years in sales — specifically cold-calling and building relationships with small to mid-size businesses. On the surface that might not seem relevant, but the overlap is real and I've felt it throughout this journey.
+
+Cold-calling teaches you to think fast, communicate clearly under pressure, and handle rejection without losing momentum — the same composure that matters when you're triaging an active incident at 2am. Working with SMBs means you're constantly context-switching between different environments, understanding how each business operates, and identifying where the gaps are. That's not far off from how a SOC analyst needs to think about the organizations they protect. And years of pipeline management and CRM work translates directly into the kind of data discipline and process adherence that security operations depend on.
 
 | Sales Background | Security Application |
 |---|---|
-| Client communication & reporting | Incident documentation and stakeholder briefings |
+| Cold-calling & handling pressure | Staying focused and methodical during incident response |
+| SMB relationship management | Understanding business context behind security decisions |
 | Pipeline analysis & pattern recognition | Log analysis and anomaly detection |
 | CRM data management & compliance | Security data hygiene and policy adherence |
-| Handling pressure and tight SLAs | Incident response time targets |
-| Training and onboarding | Security awareness knowledge transfer |
+| Training and onboarding new reps | Security awareness knowledge transfer |
 
 ---
 
