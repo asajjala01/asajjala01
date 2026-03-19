@@ -38,6 +38,18 @@ This is the next milestone on my learning path and I'll be documenting the entir
 
 ---
 
+## How I'll Be Building This
+
+One thing I've learned throughout this journey is that the best way to learn is to use every resource available to you — and I plan to do exactly that with the home lab.
+
+**AI** is going to be a big part of the build process. Whether it's troubleshooting a VM configuration that isn't behaving, debugging a tool that won't run, understanding why a scan is returning unexpected results, or just breaking down a concept that isn't clicking — AI has been a constant companion throughout my learning and this lab will be no different. I find it especially useful for getting quick explanations when I'm deep in a problem and need clarity fast without losing momentum.
+
+**My network of friends** who come from programming and tech backgrounds will also be part of this. I've leaned on them throughout the Google cert and TryHackMe when things got complex, and having people you can actually sit down with and talk through a problem is something I don't take for granted. Debugging lab environments, sanity checking configurations, bouncing ideas — that kind of collaboration makes the learning process faster and a lot more fun.
+
+The combination of structured learning, hands-on labs, AI tools, and real people to learn alongside is what's gotten me this far. The home lab is just the next chapter of the same approach.
+
+---
+
 ## Planned Documentation
 
 Once the lab is built each section below will be filled in:
