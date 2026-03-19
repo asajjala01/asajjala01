@@ -3,7 +3,8 @@
 **Platform:** Coursera  
 **Offered by:** Google  
 **Status:** ✅ Completed  
-**Duration:** 8 Courses
+**Duration:** 8 Courses  
+**Certificate:** [🏅 View & Verify on Coursera](https://coursera.org/share/7973a81b789856ef261791f1cd77960d)
 
 ---
 
@@ -13,7 +14,7 @@ I came into this with zero cybersecurity experience. I knew I wanted to make a c
 
 The Google Cybersecurity Certificate is genuinely built for people at that starting point. It doesn't assume anything. It walks you through the fundamentals — how networks work, how attackers think, how defenders respond — and more importantly, it shows you the full landscape of roles that exist in the field. Penetration testers, GRC analysts, incident responders, SOC analysts, forensics — I had no idea how many directions you could go.
 
-For me, the direction became clearer when i was learning about SIEM tools, blue teams etc. The moment I got into detection and response (alert triage, log analysis, SIEM workflows, playbooks) something clicked. I wasn't drawn to breaking things. I was drawn to *watching for threats, catching them, and responding.* That's the SOC. That's blue team. And everything after that became about going deeper in that direction.
+For me, the direction became clearer when I was learning about SIEM tools, blue teams and detection and response — alert triage, log analysis, SIEM workflows, playbooks — something clicked. I wasn't drawn to breaking things. I was drawn to *watching for threats, catching them, and responding.* That's the SOC. That's blue team. And everything after that became about going deeper in that direction.
 
 ---
 
@@ -40,22 +41,11 @@ The Google Cybersecurity Certificate covers foundational and practical skills ac
 
 ## The AI Component — Using AI to Break Into the Field
 
-One thing that surprised me about this certificate at the end of the course Google included a dedicated AI component woven into the job prep side of the program. It wasn't just "here's what AI is" — it was practical. How to actually use AI tools to accelerate your job search, build out your professional profile, and show up more polished as a candidate.
-Some of what that covered:
+One thing that surprised me — at the end of the course, Google included a dedicated AI component woven into the job prep side of the program. It wasn't just "here's what AI is" — it was practical. How to actually use AI tools to accelerate your job search, build out your professional profile, and show up more polished as a candidate. Things like using AI to strengthen your resume, optimize your LinkedIn, prep for interviews, write outreach, and break down concepts faster.
 
-## Using AI to strengthen your resume — 
-feeding your experience into AI tools to surface transferable skills you might be underselling, tighten your bullet points, and tailor your resume language to specific job descriptions
-## Optimizing your LinkedIn and professional profiles 
-— using AI to write a compelling summary, identify keyword gaps that recruiters search for, and frame a career transition story clearly
-## Interview preparation 
-— using AI as a mock interviewer, practicing answers to common security questions, and getting feedback on how you're explaining technical concepts
-## Cover letters and outreach 
-— drafting personalized outreach messages, cold emails to hiring managers, and cover letters that don't sound generic
-## Learning acceleration 
-— using AI tools to break down concepts you're stuck on, generate practice questions, and build study plans
+Coming from a sales background, I already knew how to communicate — but I didn't always know how to frame what I'd done in a way that made sense to a technical hiring manager. This section helped me close that gap. It's not about letting AI do the work for you. It's about using it to sharpen what you already have.
 
-For me personally, this section landed differently than I expected. Coming from a sales background, I already knew how to communicate — but I didn't always know how to frame what I'd done in a way that made sense to a technical hiring manager. The AI tools in this section helped me close that gap and articulate my story in a way that actually resonates in security job applications.
-It's not about letting AI do the work for you. It's about using it to sharpen what you already have.
+---
 
 ## Key Skills Gained
 
@@ -68,9 +58,10 @@ It's not about letting AI do the work for you. It's about using it to sharpen wh
 - Incident detection and response lifecycle
 - Python automation for security workflows
 - Security audit methodology
+- Using AI tools for career development and job search strategy
 
 ---
 
 ## Tools and Platforms Introduced
 
-`Splunk` `Chronicle` `Wireshark` `tcpdump` `Linux CLI` `SQL` `Python` `NIST CSF` `AI Job Tools` 
+`Splunk` `Chronicle` `Wireshark` `tcpdump` `Linux CLI` `SQL` `Python` `NIST CSF` `AI Job Tools`
