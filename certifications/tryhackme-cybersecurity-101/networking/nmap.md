@@ -134,6 +134,5 @@ Running with `-v` is worth making a habit — it gives you live feedback during 
 
 ## My Take
 
-This room was a great introduction to Nmap and genuinely enjoyable. Having used command line tools before the syntax wasn't completely foreign — but seeing real output come back in the terminal, watching Nmap enumerate 32 hosts, identifying an open HTTP port and then navigating to that port to actually capture a flag — that chain of thinking from scan output to action is exactly the kind of pattern recognition that SOC work is built on.
-
-The timing and evasion section was the most interesting conceptually. Understanding that scan speed affects whether you get detected puts real-world weight on what could otherwise feel like a technical detail. That clicked in a way it hadn't when I'd just read about it before doing it.
+This one took me a while to actually sit down and get through. The jargon hits you fast. SYN scans, half-open connections, timing templates, parallel probes, service detection flags — when you're reading through it all at once it can feel like a lot of terminology before anything actually makes sense.
+But I stayed with it and eventually it clicked. Once I stopped trying to memorize every flag and just focused on what each scan was actually doing to the target — sending packets, waiting for responses, interpreting what came back — the whole thing became a lot more intuitive. Running the commands in the actual lab environment and seeing real output is what pushed it from confusing to clear. That flag capture was the moment it all tied together for me.
