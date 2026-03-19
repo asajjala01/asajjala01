@@ -1,7 +1,15 @@
+```
+┌──(abhi㉿security)-[~/certifications/google-cybersecurity]
+└─$ cat course-03-networks.md
+```
+
 # Course 3: Connect and Protect — Networks and Network Security
 
 **Course:** Google Cybersecurity Certificate — Course 3 of 8  
 **Status:** ✅ Completed
+
+[![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat)]()
+[![Course](https://img.shields.io/badge/Course-3%20of%208-grey?style=flat)]()
 
 ---
 
@@ -45,8 +53,6 @@
 
 ## TCP/IP Model
 
-The practical model used in the real world (4 layers):
-
 | TCP/IP Layer | Maps to OSI | Protocols |
 |---|---|---|
 | Application | 5, 6, 7 | HTTP, DNS, FTP, SMTP |
@@ -77,10 +83,6 @@ The practical model used in the real world (4 layers):
 
 ## IP Addressing
 
-### IPv4
-- Format: `192.168.1.100`
-- 32-bit address space
-
 ### Private IP Ranges (RFC 1918)
 ```
 10.0.0.0    – 10.255.255.255    /8   (Class A)
@@ -99,7 +101,6 @@ The practical model used in the real world (4 layers):
 
 ## Firewalls
 
-### Types
 | Type | How It Works |
 |---|---|
 | Packet filtering | Inspects packet headers (IP, port) — no state tracking |
@@ -130,6 +131,19 @@ Deny all                                          ← implicit deny at the end
 
 ---
 
+## OS Hardening Techniques
+
+Covered toward the end of the course — the idea that securing a network isn't just about the network itself but also the systems sitting on it.
+
+- Patch management — keeping OS and software up to date
+- Baseline configurations — standardizing secure system setups
+- Disabling unused services and ports
+- Enforcing strong password policies and MFA
+- Least privilege — users only get access to what they need
+- Monitoring system logs for anomalies
+
+---
+
 ## Useful Commands
 
 ```bash
@@ -145,8 +159,24 @@ tcpdump -i eth0 -n               # capture packets on eth0
 
 ---
 
+## What I Had to Do
+
+This course had three hands-on activities and one portfolio piece — the most practical of any course so far at that point.
+
+**Analyze network layer communication** — given network traffic data, identify what was happening at the network layer, trace communication between devices, and explain what the data showed.
+
+**Analyze network attacks** — given a scenario describing suspicious network behavior, identify the type of attack taking place, explain how it worked, and document the indicators.
+
+**Analysis of network hardening** — review a fictional organization's network setup, identify weaknesses, and recommend hardening measures to reduce the attack surface.
+
+**Portfolio activity — Apply the NIST framework to respond to a security incident** — this was the main deliverable. Given a security incident scenario, walk through the NIST CSF five functions (Identify, Protect, Detect, Respond, Recover) and document how an organization should respond at each stage. This was the first time the frameworks from Course 2 felt really practical — applying them to an actual incident scenario rather than just reading about them made the structure click in a different way.
+
+---
+
 ## My Take
 
 This was the most intimidating course for me. Networks felt like a completely different language and the OSI model alone had me staring at the screen wondering if I'd gotten in over my head. But this is also where having the right resources around you makes all the difference.
+
 I leaned on two things heavily to get through this one. First, I have friends who are programmers and have been around tech their whole lives — being able to sit down with them and say "okay explain this to me like I'm five" was invaluable. They helped me understand not just what these concepts were but why they exist and how they connect to each other. Second, I used AI constantly to break things down in plain language, generate analogies, and re-explain things from different angles until they clicked. Between those two resources I went from completely lost to actually feeling like things made sense.
-And once it clicked, it really clicked. The OSI model stopped being a memorization exercise and became an actual troubleshooting tool. Understanding how protocols like ARP and DNS are supposed to work made it obvious why attacks like ARP spoofing and DNS poisoning are possible in the first place. That's the thing about networking — you can't defend what you don't understand. Port numbers I ended up drilling with flashcards and I'm glad I did because they show up everywhere in log analysis and CTF work.
+
+And once it clicked, it really clicked. The OSI model stopped being a memorization exercise and became an actual troubleshooting tool. Understanding how protocols like ARP and DNS are supposed to work made it obvious why attacks like ARP spoofing and DNS poisoning are possible in the first place. The NIST incident response activity was a good way to close out the course — taking everything from the networking and attack content and putting it through a real framework made the whole thing feel less theoretical. Port numbers I ended up drilling with flashcards and I'm glad I did because they show up everywhere in log analysis and CTF work.
