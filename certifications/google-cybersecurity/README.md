@@ -24,24 +24,30 @@ For me, the direction became clearer when I was learning about SIEM tools, blue 
 
 ---
 
-## Program Overview
+## How These Course Files Are Written
 
-The Google Cybersecurity Certificate covers foundational and practical skills across 8 courses, designed to give complete beginners a full picture of the cybersecurity field — the roles, the tools, the mindset, and a clear path to entry-level work.
+Each course file in this folder isn't a syllabus summary — anyone can Google what the course covers. Instead each one focuses on three things:
+
+- **What I actually did** — the hands-on activities, exercises, and portfolio pieces the course had me produce
+- **What stuck** — the concepts that genuinely changed how I think, not just what I memorized
+- **My take** — an honest personal reflection on the experience, what was hard, what came easy, and how it connects to the work I'm building toward
+
+The goal is to show engagement with the material, not just completion of it.
 
 ---
 
 ## Course Breakdown
 
-| # | Course | Topics |
+| # | Course | Status |
 |---|---|---|
-| 1 | [Foundations of Cybersecurity](./course-01-foundations.md) | Core concepts, CIA triad, threat actors, security domains |
-| 2 | [Play It Safe: Manage Security Risks](./course-02-manage-risks.md) | NIST frameworks, security audits, SIEM intro |
-| 3 | [Connect and Protect: Networks and Network Security](./course-03-networks.md) | Network architecture, protocols, firewalls, VPNs |
-| 4 | [Tools of the Trade: Linux and SQL](./course-04-linux-sql.md) | Linux CLI, file permissions, SQL queries for security |
-| 5 | [Assets, Threats, and Vulnerabilities](./course-05-assets-threats.md) | Asset classification, threat modeling, vulnerability assessment |
-| 6 | [Sound the Alarm: Detection and Response](./course-06-detection-response.md) | Incident lifecycle, SIEM, log analysis, playbooks |
-| 7 | [Automate Cybersecurity Tasks with Python](./course-07-python.md) | Python scripting for security automation |
-| 8 | [Put It to Work: Prepare for Cybersecurity Jobs](./course-08-career.md) | Portfolio building, stakeholder communication, job prep |
+| 1 | [Foundations of Cybersecurity](./course-01-foundations.md) | ✅ Completed |
+| 2 | [Play It Safe: Manage Security Risks](./course-02-manage-risks.md) | ✅ Completed |
+| 3 | [Connect and Protect: Networks and Network Security](./course-03-networks.md) | ✅ Completed |
+| 4 | [Tools of the Trade: Linux and SQL](./course-04-linux-sql.md) | ✅ Completed |
+| 5 | [Assets, Threats, and Vulnerabilities](./course-05-assets-threats.md) | ✅ Completed |
+| 6 | [Sound the Alarm: Detection and Response](./course-06-detection-response.md) | ✅ Completed |
+| 7 | [Automate Cybersecurity Tasks with Python](./course-07-python.md) | ✅ Completed |
+| 8 | [Put It to Work: Prepare for Cybersecurity Jobs](./course-08-career.md) | ✅ Completed |
 
 ---
 
