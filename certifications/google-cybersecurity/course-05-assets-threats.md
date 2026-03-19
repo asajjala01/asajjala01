@@ -1,7 +1,15 @@
+```
+┌──(abhi㉿security)-[~/certifications/google-cybersecurity]
+└─$ cat course-05-assets-threats.md
+```
+
 # Course 5: Assets, Threats, and Vulnerabilities
 
 **Course:** Google Cybersecurity Certificate — Course 5 of 8  
 **Status:** ✅ Completed
+
+[![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat)]()
+[![Course](https://img.shields.io/badge/Course-5%20of%208-grey?style=flat)]()
 
 ---
 
@@ -21,8 +29,6 @@ Assets are anything of value to an organization that needs protecting — hardwa
 - **Data at rest** — stored on disk, database, USB
 - **Data in transit** — moving across a network
 - **Data in use** — actively being processed in memory
-
-Each state requires different protections.
 
 ---
 
@@ -46,8 +52,8 @@ Risk          = likelihood × impact (how likely is the burglar, how bad is the 
 | Zero-day | Unknown vulnerability with no patch |
 
 ### CVE and CVSS
-- **CVE** (Common Vulnerabilities and Exposures) — a unique ID for each known vulnerability (e.g. CVE-2021-44228 = Log4Shell)
-- **CVSS** (Common Vulnerability Scoring System) — score 0–10 rating severity
+- **CVE** — unique ID for each known vulnerability (e.g. CVE-2021-44228 = Log4Shell)
+- **CVSS** — score 0–10 rating severity
 
 | CVSS Score | Severity |
 |---|---|
@@ -63,9 +69,7 @@ Risk          = likelihood × impact (how likely is the burglar, how bad is the 
 
 ## Threat Modeling
 
-A structured way to identify what could go wrong before it does.
-
-### PASTA Framework (Process for Attack Simulation and Threat Analysis)
+### PASTA Framework
 1. Define objectives
 2. Define technical scope
 3. Decompose the application
@@ -75,21 +79,15 @@ A structured way to identify what could go wrong before it does.
 7. Perform risk/impact analysis
 
 ### Attack Surface
-Everything exposed to a potential attacker:
-- Web applications
-- APIs
-- Open ports and services
+- Web applications, APIs, open ports
 - Employee email accounts (phishing targets)
 - Third-party vendors and integrations
 - Physical access points
-
-> **Principle of least privilege** reduces attack surface — users should only have access to exactly what they need.
+- USB drives and removable media
 
 ---
 
 ## Social Engineering
-
-Manipulating people rather than systems — often the easiest attack vector.
 
 | Technique | Description |
 |---|---|
@@ -97,20 +95,14 @@ Manipulating people rather than systems — often the easiest attack vector.
 | Spear phishing | Targeted phishing using personal info |
 | Vishing | Voice phishing (phone calls) |
 | Smishing | SMS phishing |
-| Pretexting | Creating a fabricated scenario to extract info |
-| Baiting | Leaving infected USB drives in public areas |
+| Pretexting | Fabricated scenario to extract info |
+| Baiting | Infected USB drives left in public areas |
 | Tailgating | Following someone through a secured door |
 | Watering hole | Compromising a site the target is known to visit |
 
-### Why Social Engineering Works
-- Creates urgency or fear ("your account will be suspended")
-- Exploits trust (impersonates IT, manager, or vendor)
-- Leverages authority
-- Takes advantage of helpfulness
-
 ---
 
-## Encryption and Hashing Basics
+## Encryption and Hashing
 
 ### Encryption
 Converts plaintext to ciphertext — reversible with a key.
@@ -119,8 +111,6 @@ Converts plaintext to ciphertext — reversible with a key.
 
 ### Hashing
 One-way transformation — cannot be reversed.
-- Used to store passwords safely
-- Common algorithms: MD5 (weak), SHA-1 (weak), SHA-256, SHA-3, bcrypt
 
 ```
 plaintext: "password123"
@@ -128,7 +118,33 @@ MD5 hash:  482c811da5d5b4bc6d497ffa98491e38  ← easily cracked
 bcrypt:    $2b$12$...                         ← much stronger
 ```
 
-> If you see MD5 or SHA-1 hashed passwords in an investigation — that's a finding.
+> MD5 and SHA-1 are considered weak — if you see these in an investigation, that's a finding.
+
+---
+
+## What I Had to Do
+
+This course had the most hands-on activities of the certificate so far — eight in total plus a portfolio piece.
+
+**Activities:**
+
+1. **Classify assets connected to a home network** — given a home network scenario, identify every connected device and classify each asset by sensitivity level. A straightforward exercise but it reinforced how quickly an attack surface grows even in a simple environment.
+
+2. **Score risks based on likelihood and severity** — given a set of vulnerabilities, assign risk scores using likelihood × impact. This is the practical application of the risk formula from earlier courses — putting numbers to actual scenarios.
+
+3. **Determine data handling practices** — given an organization's data types, identify what handling procedures should apply to each based on classification — who can access it, how it should be stored, how it should be transmitted.
+
+4. **Decrypt an encrypted message** — hands-on with symmetric encryption. Given an encrypted message and the key, decrypt it and document the process. This was where encryption stopped being abstract.
+
+5. **Create hash values** — generate hashes for files and strings, compare them, and verify integrity. Understanding why hashes are used for integrity checking rather than encryption clicked during this activity.
+
+6. **Improve AAA (Authentication, Authorization, Accounting) for a small business** — given a fictional small business with weak access controls, identify gaps and recommend improvements across all three AAA functions.
+
+7. **Identify attack vectors of a USB drive** — analyze how a physical USB device can be used as an attack vector, identify the threat scenarios (baiting, HID attacks, data exfiltration), and recommend mitigations.
+
+8. **Apply the PASTA threat model** — walk through all seven stages of PASTA against a given application scenario. This was the most involved activity in the course and the one that made the framework actually make sense — reading about PASTA is one thing, applying it step by step to a real scenario is another.
+
+**Portfolio — Analyze a vulnerable system for a small business** — given a small business environment with documented assets and infrastructure, perform a vulnerability analysis. Identify what's exposed, classify the risk level of each finding, and produce a written report with recommendations. This was the most complete deliverable of the course — it pulled together asset classification, CVE/CVSS scoring, threat modeling, and written communication all in one.
 
 ---
 
@@ -136,6 +152,6 @@ bcrypt:    $2b$12$...                         ← much stronger
 
 This course had more reading than any other in the certificate and some of it took me longer to absorb than I expected. Most of the content was manageable — asset classification, threat actors, social engineering — that stuff made intuitive sense pretty quickly. But there were two areas where I genuinely had to slow down and put in extra time.
 
-The frameworks were the first one. PASTA, threat modeling methodology, understanding how to actually apply a framework to a real scenario rather than just memorizing what the letters stand for — that required more passes than I expected. The second was hashing. Encryption I got fairly quickly, but hashing — the one-way nature of it, why you can't reverse it, how it's used for password storage and integrity verification — took me a while to fully internalize. Once it clicked it made complete sense, but it wasn't instant.
+The frameworks were the first one. PASTA especially — threat modeling methodology, understanding how to actually apply a framework to a real scenario rather than just memorizing what the letters stand for — that required more passes than I expected. The second was hashing. Encryption I got fairly quickly, but hashing — the one-way nature of it, why you can't reverse it, how it's used for password storage and integrity verification — took me a while to fully internalize. The activity where I had to actually create and compare hash values was what finally made it click. Once it did it made complete sense, but it wasn't instant.
 
-Everything else in this course was solid and easier to work through. And looking back it's one of the more foundational courses for SOC work — understanding CVE scores, how to classify assets by sensitivity, why social engineering is often the scariest attack vector — all of that shapes how you think when you're actually investigating something. The hard parts were worth pushing through.
+Everything else in this course was solid and easier to work through. The USB attack vector activity was one I didn't expect to find interesting but actually did — it's easy to overlook physical attack surfaces when you're focused on network security, but a USB drive left in a parking lot is one of the oldest and most effective social engineering techniques out there. Good reminder that the human element is always part of the equation.
