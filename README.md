@@ -17,10 +17,10 @@
 
 ## ✅ Certifications Earned
 
-| Certification | Platform | Status |
-|---|---|---|
-| Google Cybersecurity Certificate | Coursera | ✅ Completed |
-| 100 Days of Python | Coursera | ✅ Completed |
+| Certification | Platform | Status | Verify |
+|---|---|---|---|
+| Google Cybersecurity Certificate | Coursera | ✅ Completed | [🏅 View Certificate](https://coursera.org/share/7973a81b789856ef261791f1cd77960d) |
+| 100 Days of Python | Coursera | ✅ Completed | — |
 
 ---
 
@@ -103,7 +103,7 @@ This profile is my **public learning journal**. Everything I complete, build, or
 
 ## 📬 Connect
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/abhi-sajjala-045b101ab/) 
+- 💼 [LinkedIn](https://www.linkedin.com/in/abhi-sajjala-045b101ab/)
 - 🌐 [TryHackMe Profile](https://tryhackme.com/p/sajjala.abhishek)
 - 📍 San Diego, CA
 
