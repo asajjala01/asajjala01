@@ -28,7 +28,7 @@ This is where I started feeling like I was genuinely doing security work rather 
 
 Every module in this folder covers what I actually did in the labs — the specific commands I ran, the output I got back, flags I captured, and my honest take on what clicked and what didn't. These aren't course summaries — they're documentation of real hands-on work.
 
-I have write-ups for some of the rooms and labs covered across these modules. For the more detailed attack box walkthroughs, CTF challenges, and hands-on lab documentation — including terminal screenshots and step-by-step methodology — head over to the [ctf-writeups/](ctf_writeups) folder. That's where the full lab work lives.
+I have write-ups for some of the rooms and labs covered across these modules. For the more detailed attack box walkthroughs, CTF challenges, and hands-on lab documentation — including terminal screenshots and step-by-step methodology — head over to the [ctf-writeups/](ctf_writeups/) folder. That's where the full lab work lives.
 
 ---
 
