@@ -48,7 +48,7 @@ def grab_banner(target, port):
     except:
         return None
 
-  def run_scan(target, start_port, end_port, threads=100):
+def run_scan(target, start_port, end_port, threads=100):
     """
     Runs the full scan across a port range using a thread pool.
     Returns a sorted list of open ports.
