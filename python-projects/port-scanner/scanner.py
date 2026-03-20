@@ -72,3 +72,7 @@ def grab_banner(target, port):
                 print(f"  [+] Port {result} OPEN")
     
     return sorted(open_ports)
+
+
+print(scan_port("scanme.nmap.org", 80))
+print(grab_banner("scanme.nmap.org", 80))
