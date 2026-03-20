@@ -3,6 +3,10 @@ import concurrent.futures
 from datetime import datetime
 
 def scan_port(target, port):
+
+    # Validate port range before attempting connection
+    if not isinstance(port, int) or port < 0 or port > 65535:
+        return None
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(1)
@@ -11,7 +15,7 @@ def scan_port(target, port):
         if result == 0:
             return port
         return None
-    except socket.error:
+    except (socket.error, TypeError, OSError):
         return None
 
 
@@ -42,3 +46,4 @@ def run_scan(target, start_port, end_port, threads=100):
                 open_ports.append(result)
                 print(f"  [+] Port {result} OPEN")
     return sorted(open_ports)
+
