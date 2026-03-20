@@ -49,10 +49,6 @@ def grab_banner(target, port):
         return None
 
 def run_scan(target, start_port, end_port, threads=100):
-    """
-    Runs the full scan across a port range using a thread pool.
-    Returns a sorted list of open ports.
-    """
     open_ports = []
     port_range = range(start_port, end_port + 1)
     
@@ -60,9 +56,7 @@ def run_scan(target, start_port, end_port, threads=100):
     print(f"[*] Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("-" * 50)
     
-    # ThreadPoolExecutor manages a pool of worker threads
     with concurrent.futures.ThreadPoolExecutor(max_workers=threads) as executor:
-        # Map each port to a future (a pending result)
         futures = {executor.submit(scan_port, target, port): port for port in port_range}
         
         for future in concurrent.futures.as_completed(futures):
@@ -72,7 +66,3 @@ def run_scan(target, start_port, end_port, threads=100):
                 print(f"  [+] Port {result} OPEN")
     
     return sorted(open_ports)
-
-
-print(scan_port("scanme.nmap.org", 80))
-print(grab_banner("scanme.nmap.org", 80))
