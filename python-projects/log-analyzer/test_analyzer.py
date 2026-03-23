@@ -1,31 +1,38 @@
-from analyzer import parse_log_line
+from analyzer import parse_log_line, detect_brute_force, detect_admin_probe, detect_path_traversal, create_alert
 
-print("=" * 50)
-print("TEST 1 — valid log line")
-print("=" * 50)
-result = parse_log_line('10.0.0.5 - - [23/Mar/2026:10:00:04] "POST /login HTTP/1.1" 401 512')
-print(result)
+# First parse all lines from sample.log
+entries = []
+with open("sample.log", "r") as f:
+    for line in f:
+        entry = parse_log_line(line.strip())
+        if entry:
+            entries.append(entry)
 
-print("\n" + "=" * 50)
-print("TEST 2 — empty line")
-print("=" * 50)
-result = parse_log_line("")
-print(result)
+print(f"[*] Parsed {len(entries)} log entries")
 
 print("\n" + "=" * 50)
-print("TEST 3 — random string")
+print("TEST 1 — brute force detection")
 print("=" * 50)
-result = parse_log_line("this is not a log line")
-print(result)
+alerts = detect_brute_force(entries)
+for alert in alerts:
+    print(alert)
 
 print("\n" + "=" * 50)
-print("TEST 4 — valid line with 200 status")
+print("TEST 2 — admin probe detection")
 print("=" * 50)
-result = parse_log_line('192.168.1.1 - - [23/Mar/2026:10:00:01] "GET /index.html HTTP/1.1" 200 1024')
-print(result)
+alerts = detect_admin_probe(entries)
+for alert in alerts:
+    print(alert)
 
 print("\n" + "=" * 50)
-print("TEST 5 — path traversal line")
+print("TEST 3 — path traversal detection")
 print("=" * 50)
-result = parse_log_line('10.0.0.9 - - [23/Mar/2026:10:00:21] "GET /../../../etc/passwd HTTP/1.1" 400 128')
-print(result)
+alerts = detect_path_traversal(entries)
+for alert in alerts:
+    print(alert)
+
+print("\n" + "=" * 50)
+print("TEST 4 — create_alert structure check")
+print("=" * 50)
+alert = create_alert("TEST", "1.2.3.4", "this is a test alert")
+print(alert)
