@@ -1,93 +1,115 @@
 # Port Scanner
 
-A Python-based TCP port scanner built for educational purposes and cybersecurity portfolio development.
+A TCP port scanner built in Python as part of my cybersecurity learning journey.
+This project was developed block by block with the help of Claude as a
+learning tool — breaking down each function line by line to understand the logic,
+security implications, and real world relevance behind every decision. The code was
+then stress tested using test_scanner.py, and reviewed by peers to find additional
+edge cases and potential breaking points. The goal was not just to have a working
+port scanner, but to deeply understand how TCP connections work, how attackers use
+tools, and how defenders can detect and mitigate scanning activity.
 
 ## What it does
 
 This tool attempts TCP connections across a range of ports on a target IP address
-and reports which ports are open, closed, or filtered. It is intended for use on
-networks and systems you own or have explicit written permission to scan.
+or hostname and reports which ports are open. It optionally grabs service banners
+from open ports to identify software names and versions running on the target —
+a technique used in real penetration testing called version fingerprinting.
 
----
+The scanner is built across five functional blocks. Block 1 loads the socket,
+threading, argument parsing, and datetime libraries that power the tool. Block 2
+creates a TCP socket, attempts a connection to a single port, and returns the port
+number if open or None if closed or filtered. Block 3 connects to an open port,
+sends an HTTP HEAD request, and reads the server response to identify what software
+is listening. Block 4 manages a thread pool of up to 100 concurrent workers that
+call scan_port() simultaneously across the full port range, making the scan fast
+enough to cover 1024 ports in under a second. Block 5 handles command line
+arguments, resolves hostnames to IP addresses, orchestrates the scan, and prints
+a timestamped summary.
 
-## Block 1 — Imports
-```python
-import socket
-import concurrent.futures
-import argparse
-import sys
-from datetime import datetime
+## Usage
+
+Basic scan across ports 1 to 1024:
+```bash
+python scanner.py scanme.nmap.org
 ```
 
-### What each import does
-
-- `socket` — core of the project. Provides direct access to the OS-level networking
-  stack. Used to create TCP connections and probe ports.
-
-- `concurrent.futures` — enables multi-threaded scanning. Without this, scanning
-  65,535 ports sequentially at 1 second timeout each would take over 18 hours.
-  Threading brings that down to seconds.
-
-- `argparse` — handles command line arguments. Lets the user pass a target IP,
-  port range, and options without modifying the source code.
-
-- `sys` — used for clean program exits when something goes wrong, like an
-  unresolvable hostname.
-
-- `datetime` — timestamps the start and end of each scan. Critical for forensic
-  documentation and audit trails in a professional security context.
-
----
-
-## Block 2 — Core Scan Function
-```python
-def scan_port(target, port):
-    try:
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.settimeout(1)
-        result = sock.connect_ex((target, port))
-        sock.close()
-
-        if result == 0:
-            return port
-        return None
-
-    except socket.error:
-        return None
+Custom port range:
+```bash
+python scanner.py scanme.nmap.org -s 1 -e 500
 ```
 
-### Line by line
+Enable banner grabbing:
+```bash
+python scanner.py scanme.nmap.org -b
+```
 
-- `socket.socket(socket.AF_INET, socket.SOCK_STREAM)` — creates a TCP socket
-  using IPv4 addressing. AF_INET specifies the address family, SOCK_STREAM
-  specifies TCP as the protocol.
+Full scan with all options:
+```bash
+python scanner.py scanme.nmap.org -s 1 -e 65535 -t 200 -b
+```
 
-- `sock.settimeout(1)` — limits the connection attempt to 1 second. Prevents
-  threads from hanging indefinitely on filtered ports that return no response.
+| Flag | Long form | Description | Default |
+|------|-----------|-------------|---------|
+| | target | Target IP address or hostname | required |
+| -s | --start | Start port | 1 |
+| -e | --end | End port | 1024 |
+| -t | --threads | Number of concurrent threads | 100 |
+| -b | --banner | Enable banner grabbing | off |
 
-- `sock.connect_ex((target, port))` — attempts the TCP connection. Returns 0
-  if the port is open, a non-zero error code if closed or filtered.
+## Sample output
+```
+[*] Scanning 45.33.32.156 — ports 1 to 1024
+[*] Started at: 2026-03-23 20:45:44
+--------------------------------------------------
+  [+] Port 22 OPEN
+  [+] Port 80 OPEN
+[*] Grabbing banners...
+  Port 22: SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.13
+  Port 80: HTTP/1.1 200 OK Date: Mon, 23 Mar 2026 20:48:20 GMT Server: Apache/2.4.7
+[*] Scan complete. 2 open port(s) found.
+[*] Finished at: 2026-03-23 20:45:44
+```
 
-- `sock.close()` — releases the socket and its associated OS resources. Essential
-  at scan scale to prevent file descriptor exhaustion.
+## Port states
 
-- `if result == 0: return port` — returns the port number if open so the thread
-  pool can collect and report it. Returns None otherwise.
+| State | Behavior | Security relevance |
+|-------|----------|--------------------|
+| Open | Completes TCP handshake | A service is actively listening — primary attack surface |
+| Closed | Returns a TCP RST packet | Host is alive but nothing listening on that port |
+| Filtered | No response, times out | Firewall is dropping packets — reveals less information |
 
-- `try/except socket.error` — wraps the entire function so any network-level
-  failure is caught cleanly without crashing the thread.
+## What I learned
 
-### Port states
+On the technical side I learned how TCP sockets work at the OS level using
+Python's socket library, the difference between connect() and connect_ex() and
+why error codes are cleaner than exceptions in network scanning loops, how
+threading with ThreadPoolExecutor dramatically reduces scan time by running
+hundreds of connection attempts simultaneously, how service banners expose
+software versions that can be cross referenced against CVE databases for
+vulnerability assessment, and how argparse builds professional CLI interfaces
+with built in help menus.
 
-| State    | Behavior                          | What it tells an attacker         |
-|----------|-----------------------------------|-----------------------------------|
-| Open     | Completes TCP handshake           | A service is listening here       |
-| Closed   | Returns a TCP RST packet          | Host is alive, nothing listening  |
-| Filtered | No response, times out            | A firewall is dropping packets    |
+On the security side I learned that port scanning is one of the first steps in
+real penetration testing and understanding it from both sides is fundamental to
+SOC analyst work. A filtered port is more secure than a closed port because
+silence reveals less information to an attacker than a TCP RST response. Banner
+grabbing exposes version information that directly maps to known vulnerabilities
+and disabling banners is a basic hardening step. Timestamps in scan output are
+critical for forensic timeline analysis and incident response documentation.
+Low and slow scanning mimics normal traffic to evade IDS detection and
+understanding attacker evasion techniques helps defenders write better detection
+rules.
 
-### Security notes
+## Testing
 
-- This performs a full TCP connect scan. It completes the three-way handshake
-  and will appear in connection logs on a monitored network.
-- A SYN scan (half-open) is stealthier but requires raw socket privileges.
-- Only use against systems you own or have written authorization to test.
+A separate test_scanner.py file was written to stress test every function with
+20 different inputs including edge cases designed to break the scanner. Tests
+included None and empty string as target, negative port numbers and ports above
+65535, wrong data types as arguments such as floats lists and integers, SQL
+injection strings as target input, zero threads and float thread counts, and
+internal network ranges and localhost. Bugs found and fixed during testing
+included a TypeError crash when passing None as target fixed by expanding the
+except block, an OverflowError on negative ports fixed with port range
+validation, a ValueError crash on 0 threads fixed with thread count validation,
+and sloppy output when None was passed to run_scan fixed with an early return.
