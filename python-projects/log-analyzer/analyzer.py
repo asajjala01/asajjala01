@@ -53,7 +53,6 @@ def detect_brute_force(entries, threshold=5):
             alerts.append(create_alert("BRUTE FORCE", ip, f"{count} failed login attempts detected"))
     return alerts
 
-
 def detect_admin_probe(entries, threshold=3):
     """
     Detects repeated attempts to access restricted endpoints.
@@ -72,7 +71,6 @@ def detect_admin_probe(entries, threshold=3):
 
     return alerts
 
-
 def detect_path_traversal(entries):
     """
     Detects path traversal attempts in requested endpoints.
@@ -89,3 +87,60 @@ def detect_path_traversal(entries):
 
     return alerts
 
+def generate_report(alerts, log_file):
+    """
+    Takes a list of alerts and prints a formatted SOC analyst report.
+    """
+    print("\n" + "=" * 60)
+    print("       SOC ANALYST ALERT REPORT")
+    print("=" * 60)
+    print(f"Log file analyzed: {log_file}")
+    print(f"Report generated:  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"Total alerts:      {len(alerts)}")
+    print("=" * 60)
+
+    if not alerts:
+        print("\n[*] No suspicious activity detected.")
+        return
+
+    for alert in alerts:
+        print(f"\n[!] ALERT — {alert['type']}")
+        print(f"    IP Address : {alert['ip']}")
+        print(f"    Detail     : {alert['detail']}")
+        print(f"    Timestamp  : {alert['timestamp']}")
+        print("-" * 60)
+
+    print(f"\n[*] Report complete. {len(alerts)} alert(s) generated.")
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python analyzer.py <logfile>")
+        print("Example: python analyzer.py sample.log")
+        sys.exit(1)
+
+    log_file = sys.argv[1]
+
+    try:
+        with open(log_file, "r") as f:
+            lines = f.readlines()
+    except FileNotFoundError:
+        print(f"[!] Error: log file '{log_file}' not found")
+        sys.exit(1)
+
+    entries = []
+    for line in lines:
+        entry = parse_log_line(line.strip())
+        if entry:
+            entries.append(entry)
+
+    print(f"[*] Parsed {len(entries)} log entries from {log_file}")
+
+    all_alerts = []
+    all_alerts.extend(detect_brute_force(entries))
+    all_alerts.extend(detect_admin_probe(entries))
+    all_alerts.extend(detect_path_traversal(entries))
+
+    generate_report(all_alerts, log_file)
+
+if __name__ == "__main__":
+    main()
