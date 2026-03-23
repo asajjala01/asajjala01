@@ -47,3 +47,37 @@ def run_scan(target, start_port, end_port, threads=100):
                 print(f"  [+] Port {result} OPEN")
     return sorted(open_ports)
 
+def main():
+    parser = argparse.ArgumentParser(
+        description="Python Port Scanner — for authorized use only"
+    )
+    parser.add_argument("target", help="Target IP address or hostname")
+    parser.add_argument("-s", "--start", type=int, default=1, help="Start port (default: 1)")
+    parser.add_argument("-e", "--end", type=int, default=1024, help="End port (default: 1024)")
+    parser.add_argument("-t", "--threads", type=int, default=100, help="Thread count (default: 100)")
+    parser.add_argument("-b", "--banner", action="store_true", help="Enable banner grabbing")
+    
+    args = parser.parse_args()
+    
+    try:
+        target_ip = socket.gethostbyname(args.target)
+    except socket.gaierror:
+        print(f"[!] Could not resolve hostname: {args.target}")
+        sys.exit(1)
+    
+    open_ports = run_scan(target_ip, args.start, args.end, args.threads)
+    
+    if args.banner and open_ports:
+        print("\n[*] Grabbing banners...")
+        for port in open_ports:
+            banner = grab_banner(target_ip, port)
+            if banner:
+                print(f"  Port {port}: {banner[:80]}")
+    
+    print(f"\n[*] Scan complete. {len(open_ports)} open port(s) found.")
+    print(f"[*] Finished at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+
+if __name__ == "__main__":
+    main()
+
