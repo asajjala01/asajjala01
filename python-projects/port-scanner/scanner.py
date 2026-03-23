@@ -4,9 +4,11 @@ import argparse
 from datetime import datetime
 
 def scan_port(target, port):
-
-    # Validate port range before attempting connection
-    if not isinstance(port, int) or port < 0 or port > 65535:
+    # Validate target is a proper string
+    if not isinstance(target, str) or not target.strip():
+        return None
+    # Validate port range
+    if not isinstance(port, int) or isinstance(port, bool) or port < 0 or port > 65535:
         return None
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -34,19 +36,33 @@ def grab_banner(target, port):
 
 
 def run_scan(target, start_port, end_port, threads=100):
-    # Input validation
-    if target is None:
-        print("[!] Error: target cannot be None")
+    if not isinstance(target, str) or not target.strip():
+        print("[!] Error: target must be a valid string")
         return []
-    if not isinstance(threads, int) or threads < 1:
+    if not isinstance(threads, int) or isinstance(threads, bool) or threads < 1:
         print("[!] Error: thread count must be a positive integer")
+        return []
+    if not isinstance(start_port, int) or not isinstance(end_port, int):
+        print("[!] Error: port values must be integers")
         return []
     if start_port < 0 or end_port > 65535:
         print("[!] Error: port range must be between 0 and 65535")
         return []
     
     open_ports = []
-    # rest of the function continues...
+    port_range = range(start_port, end_port + 1)
+    print(f"\n[*] Scanning {target} — ports {start_port} to {end_port}")
+    print(f"[*] Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("-" * 50)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=threads) as executor:
+        futures = {executor.submit(scan_port, target, port): port for port in port_range}
+        for future in concurrent.futures.as_completed(futures):
+            result = future.result()
+            if result is not None:
+                open_ports.append(result)
+                print(f"  [+] Port {result} OPEN")
+    return sorted(open_ports)
+
 
 def main():
     parser = argparse.ArgumentParser(
