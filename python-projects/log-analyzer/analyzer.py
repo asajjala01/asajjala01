@@ -16,10 +16,10 @@ def create_alert(alert_type, ip, detail):
     }
 
 def parse_log_line(line):
-    """
-    Parses a single log line and extracts key fields.
-    Returns a dictionary of extracted values or None if line doesn't match.
-    """
+    # Validate input
+    if not isinstance(line, str) or not line.strip():
+        return None
+    
     pattern = r'(\d+\.\d+\.\d+\.\d+).*\[(.+?)\].*"(\w+)\s+(\S+)\s+HTTP/\d+\.\d+"\s+(\d+)\s+(\d+)'
     
     match = re.match(pattern, line)
@@ -37,20 +37,65 @@ def parse_log_line(line):
     }
 
 def detect_brute_force(entries, threshold=5):
-    """
-    Detects brute force login attempts.
-    Flags IPs that fail authentication more than threshold times.
-    """
+    if not isinstance(entries, list):
+        return []
+    if not isinstance(threshold, int) or isinstance(threshold, bool) or threshold < 1:
+        return []
+    
     failed_logins = defaultdict(int)
     alerts = []
 
     for entry in entries:
-        if entry["status"] == 401:
-            failed_logins[entry["ip"]] += 1
+        try:
+            if entry["status"] == 401:
+                failed_logins[entry["ip"]] += 1
+        except (TypeError, KeyError):
+            continue
 
     for ip, count in failed_logins.items():
         if count >= threshold:
             alerts.append(create_alert("BRUTE FORCE", ip, f"{count} failed login attempts detected"))
+
+    return alerts
+
+def detect_admin_probe(entries, threshold=3):
+    if not isinstance(entries, list):
+        return []
+    if not isinstance(threshold, int) or isinstance(threshold, bool) or threshold < 1:
+        return []
+
+    forbidden_hits = defaultdict(int)
+    alerts = []
+
+    for entry in entries:
+        try:
+            if entry["status"] == 403:
+                forbidden_hits[entry["ip"]] += 1
+        except (TypeError, KeyError):
+            continue
+
+    for ip, count in forbidden_hits.items():
+        if count >= threshold:
+            alerts.append(create_alert("ADMIN PROBE", ip, f"{count} attempts to access restricted endpoints"))
+
+    return alerts
+
+def detect_path_traversal(entries):
+    if not isinstance(entries, list):
+        return []
+
+    alerts = []
+    suspicious_patterns = ["../", "..\\", "/etc/passwd", "/etc/shadow", "cmd.exe"]
+
+    for entry in entries:
+        try:
+            for pattern in suspicious_patterns:
+                if pattern in entry["endpoint"]:
+                    alerts.append(create_alert("PATH TRAVERSAL", entry["ip"], f"Suspicious pattern '{pattern}' in endpoint {entry['endpoint']}"))
+                    break
+        except (TypeError, KeyError):
+            continue
+
     return alerts
 
 def detect_admin_probe(entries, threshold=3):
@@ -88,29 +133,11 @@ def detect_path_traversal(entries):
     return alerts
 
 def generate_report(alerts, log_file):
-    """
-    Takes a list of alerts and prints a formatted SOC analyst report.
-    """
-    print("\n" + "=" * 60)
-    print("       SOC ANALYST ALERT REPORT")
-    print("=" * 60)
-    print(f"Log file analyzed: {log_file}")
-    print(f"Report generated:  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"Total alerts:      {len(alerts)}")
-    print("=" * 60)
-
-    if not alerts:
-        print("\n[*] No suspicious activity detected.")
+    if not isinstance(alerts, list):
+        print("[!] Error: alerts must be a list")
         return
-
-    for alert in alerts:
-        print(f"\n[!] ALERT — {alert['type']}")
-        print(f"    IP Address : {alert['ip']}")
-        print(f"    Detail     : {alert['detail']}")
-        print(f"    Timestamp  : {alert['timestamp']}")
-        print("-" * 60)
-
-    print(f"\n[*] Report complete. {len(alerts)} alert(s) generated.")
+    if log_file is None:
+        log_file = "unknown"
 
 def main():
     if len(sys.argv) < 2:
