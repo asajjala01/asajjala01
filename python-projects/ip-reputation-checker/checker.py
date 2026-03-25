@@ -62,9 +62,6 @@ def check_ip(ip):
         return None
 
 def check_multiple_ips(ip_list, threshold=50):
-    """
-    Takes a list of IPs, checks each one, and categorizes by risk level.
-    """
     if not isinstance(ip_list, list):
         print("[!] Error: ip_list must be a list")
         return {"clean": [], "suspicious": [], "malicious": []}
@@ -73,23 +70,26 @@ def check_multiple_ips(ip_list, threshold=50):
         print("[!] Error: threshold must be a positive integer")
         return {"clean": [], "suspicious": [], "malicious": []}
 
+    # Deduplicate while preserving order
+    seen = set()
+    unique_ips = []
+    for ip in ip_list:
+        if ip is None:
+            continue
+        ip = str(ip).strip()
+        if ip and ip not in seen:
+            seen.add(ip)
+            unique_ips.append(ip)
+
     results = {
         "clean": [],
         "suspicious": [],
         "malicious": []
     }
 
-    total = len(ip_list)
+    total = len(unique_ips)
 
-    for i, ip in enumerate(ip_list):
-        if ip is None:
-            continue
-
-        ip = str(ip).strip()
-
-        if not ip:
-            continue
-
+    for i, ip in enumerate(unique_ips):
         print(f"[*] Checking {ip} ({i+1}/{total})")
         result = check_ip(ip)
 
