@@ -16,7 +16,7 @@
 
 ## What This Path Is
 
-SOC Level 1 is TryHackMe's dedicated learning path for anyone targeting an entry-level SOC analyst role. It covers the core tools, frameworks, and workflows that a L1 analyst uses on the job — threat intelligence, SIEM, network traffic analysis, endpoint monitoring, digital forensics, phishing analysis, and incident response. It's not theory — every module puts you inside real tools and real scenarios.
+SOC Level 1 is TryHackMe's dedicated learning path for anyone targeting an entry-level SOC analyst role. It covers the core tools, frameworks, and workflows that a L1 analyst uses on the job — threat intelligence, SIEM, network traffic analysis, endpoint monitoring, digital forensics, phishing analysis, and incident response. Every module puts you inside real tools and real scenarios.
 
 This is the path I've been building toward since starting the Google Cybersecurity Certificate. Everything before this was laying the groundwork. This is where the actual role begins.
 
@@ -26,29 +26,43 @@ This is the path I've been building toward since starting the Google Cybersecuri
 
 ```
 Blue Team Introduction       ████████████████████  ✅ Completed
+SOC Team Internals           ████████░░░░░░░░░░░░  In Progress
+Core SOC Solutions           ░░░░░░░░░░░░░░░░░░░░  Upcoming
 Cyber Defence Frameworks     ░░░░░░░░░░░░░░░░░░░░  Upcoming
-Cyber Threat Intelligence    ░░░░░░░░░░░░░░░░░░░░  Upcoming
-Network Security & Traffic   ░░░░░░░░░░░░░░░░░░░░  Upcoming
-Endpoint Security Monitoring ░░░░░░░░░░░░░░░░░░░░  Upcoming
-SIEM                         ░░░░░░░░░░░░░░░░░░░░  Upcoming
-Digital Forensics & IR       ░░░░░░░░░░░░░░░░░░░░  Upcoming
 Phishing Analysis            ░░░░░░░░░░░░░░░░░░░░  Upcoming
+Network Traffic Analysis     ░░░░░░░░░░░░░░░░░░░░  Upcoming
+Network Security Monitoring  ░░░░░░░░░░░░░░░░░░░░  Upcoming
+Web Security Monitoring      ░░░░░░░░░░░░░░░░░░░░  Upcoming
+Windows Security Monitoring  ░░░░░░░░░░░░░░░░░░░░  Upcoming
+Linux Security Monitoring    ░░░░░░░░░░░░░░░░░░░░  Upcoming
+Malware Concepts for SOC     ░░░░░░░░░░░░░░░░░░░░  Upcoming
+Threat Analysis Tools        ░░░░░░░░░░░░░░░░░░░░  Upcoming
+SIEM Triage for SOC          ░░░░░░░░░░░░░░░░░░░░  Upcoming
+SOC Level 1 Capstone         ░░░░░░░░░░░░░░░░░░░░  Upcoming
+SAL1 Certification           ░░░░░░░░░░░░░░░░░░░░  Upcoming
 ```
 
 ---
 
 ## Module Breakdown
 
-| Module | Topics | Status |
+| Module | Description | Status |
 |---|---|---|
-| Blue Team Introduction | SOC roles, blue team fundamentals, analyst workflow | ✅ Completed |
-| Cyber Defence Frameworks | MITRE ATT&CK, Cyber Kill Chain, Diamond Model | 📖 Upcoming |
-| Cyber Threat Intelligence | Threat intel lifecycle, OSINT, threat feeds | 📖 Upcoming |
-| Network Security & Traffic Analysis | Wireshark, Zeek, Snort, network forensics | 📖 Upcoming |
-| Endpoint Security Monitoring | Sysinternals, Sysmon, endpoint detection | 📖 Upcoming |
-| SIEM | Splunk, ELK Stack, log analysis, detections | 📖 Upcoming |
-| Digital Forensics & Incident Response | Evidence collection, disk and memory forensics | 📖 Upcoming |
-| Phishing Analysis | Email header analysis, URL analysis, phishing triage | 📖 Upcoming |
+| Blue Team Introduction | SOC roles, defensive security fundamentals, attack vectors | ✅ Completed |
+| SOC Team Internals | Triage, classify, and escalate alerts in real-world SOC environments | 🔄 In Progress |
+| Core SOC Solutions | SIEM, EDR, and SOAR — the core security solutions used in a SOC | 📖 Upcoming |
+| Cyber Defence Frameworks | Pyramid of Pain, Cyber Kill Chain, MITRE ATT&CK | 📖 Upcoming |
+| Phishing Analysis | Analyse and defend against phishing emails using real-world techniques | 📖 Upcoming |
+| Network Traffic Analysis | Network traffic analysis hands-on with Wireshark | 📖 Upcoming |
+| Network Security Monitoring | Monitor network perimeters, analyse traffic and logs for attacks | 📖 Upcoming |
+| Web Security Monitoring | Protect and monitor the web in SOC-oriented labs and scenarios | 📖 Upcoming |
+| Windows Security Monitoring | Windows logging and detecting common Windows attacks | 📖 Upcoming |
+| Linux Security Monitoring | Linux logging and detecting common Linux attacks | 📖 Upcoming |
+| Malware Concepts for SOC | Identify malware types, analyse files, understand living off the land attacks | 📖 Upcoming |
+| Threat Analysis Tools | Threat intelligence, enrichment techniques, and analysis workflows | 📖 Upcoming |
+| SIEM Triage for SOC | Detect early signs of attacks, correlate logs, build incident timelines | 📖 Upcoming |
+| SOC Level 1 Capstone Challenges | Investigate critical incidents using all skills from the path | 📖 Upcoming |
+| Security Analyst Level 1 (SAL1) | Industry-recognised practical defensive certification | 📖 Upcoming |
 
 ---
 
@@ -63,13 +77,13 @@ Every module in this folder documents what I actually did — commands run, outp
 ![MITRE ATT&CK](https://img.shields.io/badge/MITRE%20ATT%26CK-grey?style=flat)
 ![Splunk](https://img.shields.io/badge/Splunk-000000?style=flat&logo=splunk&logoColor=white)
 ![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=flat&logo=wireshark&logoColor=white)
-![Zeek](https://img.shields.io/badge/Zeek-grey?style=flat)
-![Snort](https://img.shields.io/badge/Snort-grey?style=flat)
-![Sysmon](https://img.shields.io/badge/Sysmon-grey?style=flat)
-![Digital Forensics](https://img.shields.io/badge/Digital%20Forensics-grey?style=flat)
+![EDR](https://img.shields.io/badge/EDR-grey?style=flat)
+![SOAR](https://img.shields.io/badge/SOAR-grey?style=flat)
 ![Phishing Analysis](https://img.shields.io/badge/Phishing%20Analysis-grey?style=flat)
 ![Threat Intelligence](https://img.shields.io/badge/Threat%20Intelligence-grey?style=flat)
 ![Incident Response](https://img.shields.io/badge/Incident%20Response-grey?style=flat)
+![Malware Analysis](https://img.shields.io/badge/Malware%20Analysis-grey?style=flat)
+![Network Monitoring](https://img.shields.io/badge/Network%20Monitoring-grey?style=flat)
 
 ---
 
