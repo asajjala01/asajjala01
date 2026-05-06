@@ -124,7 +124,6 @@ hashcat -m [hash_type] -a 0 [hash_file] [wordlist]
 hashcat -m 1400 -a 0 hash2.txt /usr/share/wordlists/rockyou.txt --force
 ```
 
-![Hashcat running SHA-256 crack against rockyou.txt wordlist](./screenshots/hashcat-command.png)
 
 **Hashes cracked:**
 
@@ -135,7 +134,6 @@ hashcat -m 1400 -a 0 hash2.txt /usr/share/wordlists/rockyou.txt --force
 | hash3.txt | `$6$GQXVvW4EuM$ehD6jWiMsfNorxy5SINsgdlxmAEl3.yif0/c3NqzGLa0P.S7KRDYjycw5bnYkF5ZtB8wQy8KnskuWQS3Yr1wQ0` | SHA-512crypt | `spaceman` |
 | hash4.txt | `b6b0d451bbf6fed658659a9e7e5598fe` | MD5 | `funforyou` |
 
-![Correct answers showing cracked hashes halloween spaceman funforyou](./screenshots/hashcat-results.png)
 
 ---
 
